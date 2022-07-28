@@ -163,7 +163,6 @@ plt.show()
 plt.imshow(image2_lines)
 plt.show()
 
-
 # ---------- use given camera matrix and create an array of 3d points of on the given house model --------
 cam_mat_1, cam_mat_2 = get_camera_matrix_in_numpy()
 three_d_points = get_3d_point_array(list_of_match_points_1_float, list_of_match_points_2_float, cam_mat_1, cam_mat_2)
