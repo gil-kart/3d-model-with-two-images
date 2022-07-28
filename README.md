@@ -1,5 +1,5 @@
 # 3d-model-with-two-images
-given two images of the same scene, taken from different angle, create a 3d model of the objects that appear in the images
+given two images of the same scene, taken from different angle, and the camera matrix for each image, we want to create a 3d model of the objects that appear in the images.
 
 so let's take a look at this two images of a house:
 
@@ -26,5 +26,5 @@ now from each point, we draw a line to the next point at the list so we get a ni
 and this is how the model looks when performing rotation transformation on it:
 ![output_gif](https://user-images.githubusercontent.com/73134488/181613002-c00e92cb-4547-4b30-bf6a-eb93e5d5893b.gif)
 
-so now, for every two images of an object, showen from two different angles, we can create a model of it, by marking matching points. the model will look more accurate when using a larger number of points. 
+so now, for every two images of an object, showen from two different angles, and their camera matrix, we can create a model of it, by marking matching points. the model will look more accurate when using a larger number of points. 
 
