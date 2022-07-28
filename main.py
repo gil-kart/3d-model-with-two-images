@@ -67,6 +67,18 @@ def draw_line_on_image(list_of_match_points_1, list_of_match_points_2, image1, i
     return image1, image2
 
 
+def draw_line_on_image2(list_of_match_points_1, list_of_match_points_2, image1, image2):
+    for ind in range(len(list_of_match_points_1)):  # draw lines on images
+        red = randint(50, 255)
+        green = randint(50, 255)
+        blue = randint(50, 255)
+        if ind < len(list_of_match_points_1):
+            cv2.line(image1, list_of_match_points_1[ind], list_of_match_points_1[ind], (red, green, blue),
+                     thickness=18)
+            cv2.line(image2, list_of_match_points_2[ind], list_of_match_points_2[ind], (red, green, blue),
+                     thickness=18)
+    return image1, image2
+
 def get_camera_matrix_in_numpy():
     with open(r'camera_matrixes\cameraMatrix1.txt', 'r') as file:  # read match points
         camera_matrix_1_string = file.read().replace(',', ' ')
@@ -154,14 +166,27 @@ def create_model_image(array_of_x, array_of_y, image_index, present):
 image1 = cv2.imread(r'houses_images\house_1.png')
 image2 = cv2.imread(r'houses_images\house_2.png')
 
+
+
 # ---------- use given points to draw lines on two given images and plot the result --------
 list_of_match_points_1, list_of_match_points_2, list_of_match_points_1_float, list_of_match_points_2_float = \
     get_lists_of_match_points()
+
+# ---------- show images with points marked on them ------------------------------------------------------
+image1_lines_points, image2_lines_points = draw_line_on_image2(list_of_match_points_1.copy(), list_of_match_points_2.copy(), image1.copy(), image2.copy())
+plt.imshow(image1_lines_points)
+plt.show()
+plt.imshow(image2_lines_points)
+plt.show()
+
+# ---------- show images with matching lines marked on them ------------------------------------------------------
+
 image1_lines, image2_lines = draw_line_on_image(list_of_match_points_1, list_of_match_points_2, image1, image2)
 plt.imshow(image1_lines)
 plt.show()
 plt.imshow(image2_lines)
 plt.show()
+
 
 # ---------- use given camera matrix and create an array of 3d points of on the given house model --------
 cam_mat_1, cam_mat_2 = get_camera_matrix_in_numpy()
