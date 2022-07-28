@@ -7,7 +7,7 @@ so let's take a look at this two images of a house:
 ![house_2](https://user-images.githubusercontent.com/73134488/181603103-a912f0b2-b9e3-4c06-a580-38c1f5c3257a.png)
 
 it's the same house but from two different angles. 
-what we want to do is create a 3d models of the house. 
+what we want to do is create a 3d model of the house. 
 the way we're going to do it is by marking matching points on both of the images:
 
 ![house1_points](https://user-images.githubusercontent.com/73134488/181607430-a1c6d6d0-c302-4513-93d1-e23974db8f60.jpg)
