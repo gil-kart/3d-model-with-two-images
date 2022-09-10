@@ -28,3 +28,15 @@ and this is how the model looks when performing rotation transformation on it:
 
 so now, for every two images of an object, showen from two different angles, and their camera matrix, we can create a model of it, by marking matching points. the model will look more accurate when using a larger number of points. 
 
+
+to run this code localy, after cloning the project, run the commaneds:
+```
+pip install numpy
+pip install opencv-python
+pip install matplotlib
+pip install scipy
+
+````
+and run the project.
+
+
