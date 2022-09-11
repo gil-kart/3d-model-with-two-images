@@ -38,5 +38,5 @@ pip install scipy
 
 ````
 and run the project.
-
+after running it, the folder ***gif_folder*** will contain a series of images that will create a short gif of the model spins around the X and Y axis.
 
