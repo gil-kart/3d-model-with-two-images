@@ -233,6 +233,6 @@ for angle in range(36):  # rotate by y
     three_d_points = rotate_by_some_angle(three_d_points, (np.pi * 2) / 36, rot_x, rot_y)
     ave_point = get_average_vector(three_d_points)
     array_of_x, array_of_y, list_of_xy_points = get_centered_xy_points(three_d_points, ave_point)
-    create_model_image(array_of_x, array_of_y, angle + 36)
+    create_model_image(array_of_x, array_of_y, angle + 36, present=False)
 
 
